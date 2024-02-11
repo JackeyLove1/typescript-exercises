@@ -76,9 +76,19 @@ Exercise:
 
 */
 
-export type User = unknown;
+export class User {
+    name: string
+    age: number
+    occupation: string
 
-export const users: unknown[] = [
+    constructor(name: string, age: number, occupation: string) {
+        this.name = name
+        this.age = age
+        this.occupation = occupation
+    }
+}
+
+export const users: User[] = [
     {
         name: 'Max Mustermann',
         age: 25,
@@ -91,7 +101,7 @@ export const users: unknown[] = [
     }
 ];
 
-export function logPerson(user: unknown) {
+export function logPerson(user: User) {
     console.log(` - ${user.name}, ${user.age}`);
 }
 
